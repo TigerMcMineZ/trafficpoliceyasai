@@ -26,7 +26,7 @@ with st.form("arrest_form"):
     with col1:
         date_input = st.date_input("วันที่จับกุม", datetime.date.today())
     with col2:
-        arrest_time = st.text_input("เวลาที่จับ (เช่น 21:30 น.)", "21:30 น.")
+        arrest_time = st.text_input("เวลาที่จับ (เช่น 21:30)", "21:30")
     
     arrest_location = st.text_input("สถานที่จับกุม", "แยกบ้านวังน้ำโจน หมู่ 3 ต.แจงงาม อ.หนองหญ้าไซ จ.สุพรรณบุรี")
     charge = st.text_area("ข้อหา", "เป็นผู้ขับขี่รถในขณะเมาสุราหรือของเมาอย่างอื่น")
@@ -124,4 +124,5 @@ if submitted:
 
     except Exception as e:
         st.error(f"เกิดข้อผิดพลาด: {e}")
+
         st.warning("คำแนะนำ: ตรวจสอบว่ามีไฟล์ template_22.docx และ template_23.docx อยู่ในโฟลเดอร์เดียวกับไฟล์นี้หรือไม่")
